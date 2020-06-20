@@ -16,6 +16,10 @@ body{
     justify-content: center;
 }
 
+/* button{
+    max-width: 280px;
+} */
+
 #left-panel{
     height:100vh;
 }
@@ -23,12 +27,31 @@ body{
 #right-panel-top{
     border: grey solid 2px;
     border-radius: 10px;
-    height: 40vh;
+    height: 25vh;
 }
 
 #right-panel-bottom{
     border: grey solid 2px;
     border-radius: 10px;
-    height: 30vh;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.dailyForecast{
+    border: grey solid 2px;
+    border-radius: 5px;
+    width:150px;
+    float:left;
+    margin: 0px 20px 0px 20px;
+    background-color: rgb(55, 55, 168);
+    color:white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.conditionIcon{
+    height:40px;
+    width:40px;
+}
