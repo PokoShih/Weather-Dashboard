@@ -15,7 +15,7 @@ $(document).on("click", ".newButtons",retrieve);
         var cityName = $("#userInput").val();
         $(".list-group").append("<button id = \"" + cityName + "\"value=\"" + cityName + "\"type=\"button\" class=\"newButtons\">" + cityName + "</button>");
         var apiKey = "c47a977ce2245fa14b93cb800e8c8a50";
-        var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=" + apiKey;
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=" + apiKey;
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -38,7 +38,7 @@ $(document).on("click", ".newButtons",retrieve);
                 $("#right-panel-top").append("<h2>" + cityName + "</h2>" + "<img class=\"conditionIcon\" src=" + conditionIcon + ">" + condition + "<br>");
                 $("#right-panel-top").append(pasteT);
             });
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ",au" + "&units=metric&appid=" + apiKey;
+        var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ",au" + "&units=metric&appid=" + apiKey;
         $.ajax({
             url: queryURL,
             method: "GET"
