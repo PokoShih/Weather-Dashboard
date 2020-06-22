@@ -57,3 +57,13 @@ p{
     font-size: 2rem;
     font-weight: bold;
 }
+
+.uvVal{
+    border: grey solid 1px;
+    border-radius:5px;
+    width:125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:40px
+}

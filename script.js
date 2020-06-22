@@ -47,7 +47,21 @@ function retrieve() {
             })
                 .then(function (response) {
                     var uvVal = response.value;
-                    $("#right-panel-top").append( "UV Index: " + uvVal);
+                    $("#right-panel-top").append("<div class=\"uvVal\">" + "UV Index: " + uvVal + "</div>");
+                    if (uvVal < 2) {
+                        $(".uvVal").css("background-color", "green",);
+                        $(".uvVal").css("color", "white");
+                    } else if (uvVal >= 2 && uvVal < 5) {
+                        $(".uvVal").css("background-color", "yellow");
+                        $(".uvVal").css("color", "white");
+                    } else if (uvVal >= 5 && uvVal < 7) {
+                        $(".uvVal").css("background-color", "orange");
+                        $(".uvVal").css("color", "white");
+                    } else {
+                        $(".uvVal").css("background-color", "red");
+                        $(".uvVal").css("color", "white");
+                    }
+
                 });
         });
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ",au" + "&units=metric&appid=" + apiKey;
