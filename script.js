@@ -15,6 +15,7 @@ $(document).on("click", ".newButtons",retrieve);
         var cityName = $("#userInput").val();
         $(".list-group").append("<button id = \"" + cityName + "\"value=\"" + cityName + "\"type=\"button\" class=\"newButtons\">" + cityName + "</button>");
         var apiKey = "c47a977ce2245fa14b93cb800e8c8a50";
+        // http would not work, uploading https instead
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=" + apiKey;
         $.ajax({
             url: queryURL,
