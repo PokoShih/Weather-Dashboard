@@ -38,6 +38,7 @@ $(document).on("click", ".newButtons",retrieve);
                     "Wind speed: " + windSpeed + " KMh<br>";
                 $("#right-panel-top").append("<h2>" + cityName + "</h2>" + "<img class=\"conditionIcon\" src=" + conditionIcon + ">" + condition + "<br>");
                 $("#right-panel-top").append(pasteT);
+                console.log(response);
             });
         var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + ",au" + "&units=metric&appid=" + apiKey;
         $.ajax({
@@ -45,7 +46,7 @@ $(document).on("click", ".newButtons",retrieve);
             method: "GET"
         })
             .then(function (response) {
-                $("#right-panel-bottom").append("<h6>5Day Forecast</h6>" + "<div class=\"follow\"></div>" + "<br>");
+                $("#right-panel-bottom").append("<div class=\"forecastTitle\" >5Day Forecast</div>" + "<br>" + "<div class=\"follow\"></div>");
                 for (i = 0; i < response.list.length; i += 8) {
                     var date = response.list[i].dt_txt.slice(0, 11);
                     var temperature = response.list[i].main.temp;

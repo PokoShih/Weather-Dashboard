@@ -33,15 +33,13 @@ p{
     border: grey solid 2px;
     border-radius: 10px;
     height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .dailyForecast{
     border: grey solid 2px;
     border-radius: 5px;
-    width:150px;
+    width:175px;
     float:left;
     margin: 0px 5px 0px 5px;
     background-color: rgb(55, 55, 168);
@@ -53,4 +51,9 @@ p{
 .conditionIcon{
     height:40px;
     width:40px;
+}
+
+.forecastTitle{
+    font-size: 2rem;
+    font-weight: bold;
 }
