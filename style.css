@@ -16,10 +16,9 @@ body{
     justify-content: center;
 }
 
-/* button{
-    max-width: 280px;
-} */
-
+p{
+    vertical-align: text-top;
+}
 #left-panel{
     height:100vh;
 }
@@ -33,7 +32,7 @@ body{
 #right-panel-bottom{
     border: grey solid 2px;
     border-radius: 10px;
-    height: 40vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,10 +43,10 @@ body{
     border-radius: 5px;
     width:150px;
     float:left;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 5px 0px 5px;
     background-color: rgb(55, 55, 168);
     color:white;
-    padding: 10px;
+    padding: 5px;
     font-weight: bold;
 }
 
